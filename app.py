@@ -171,7 +171,7 @@ def generate():
 
             # Discount badge
             if discount and discount != '0':
-                badge_text = "-" + discount + "%"
+                badge_text = "-" + str(round(abs(float(discount)) * 100)) + "%"
                 badge_cx = cx + PHOTO_W // 2 - 48
                 badge_cy = gy + 38 + (photo_img.height if photo_img else PHOTO_H) - 22
                 draw_discount_badge(draw, badge_cx, badge_cy, badge_text, font_badge)
